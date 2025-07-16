@@ -9,11 +9,62 @@
     */
 
     //ENTRADA
+    let numero = Number(prompt('Digite um número'));
+    let numero2 = Number(prompt('Digite outro número'));
+    let sinal = prompt('Qual operação ("A" para adição, "M" para multiplicação, "S" para subtração e "D" para divisão)');
 
 
     //PROCESSAMENTO
+    let resultado
+    let mensagem = `O resultado é : `;
+    switch(sinal){
+        case 'A':
+            resultado = numero + numero2
+            mensagem = mensagem + resultado + `, `;
+        break;
+        case 'S':
+            resultado = numero - numero2
+            mensagem = mensagem + resultado + `, `;
+        break;
+        case 'M':
+            resultado = numero * numero2
+            mensagem = mensagem + resultado + `, `;
+        break;
+        case 'D':
+            resultado = numero / numero2
+            mensagem = mensagem + resultado + `, `;
+        break;
+        default:
+        document.write('Sinal inválido');
+    }
+    switch(Number.isInteger(resultado)){
+        case true:
+            mensagem = mensagem + 'é par,'
+            break;
+        case false:
+            mensagem = mensagem + 'é ímpar'
+            break;
+    }
+    switch(Math.sign(resultado)){
+        case 1:
+            mensagem = mensagem + 'é positivo e '
+            break;
+        case -1:
+            mensagem = mensagem + 'é neagativo e'
+            break;
+        default: 
+            mensagem = mensagem + 'é nulo e'
+    }
+    switch(Number.isInteger(resultado / 1)){
+        case true:
+            mensagem = mensagem + 'é inteiro'
+        break;
+        case false:
+            mensagem = mensagem + 'é decimal'
+    }
 
     
     //SAÍDA
+    document.write(`${mensagem}`);
 
 </script>

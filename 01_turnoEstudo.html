@@ -13,9 +13,26 @@
     */
 
     //ENTRADA
+    const horario = prompt('Qual o turno que você estuda? (Use "M" para matutino, "V" para vespertino, e "N" para noturno)');
     
     
     //PROCESSAMENTO
+    switch(horario){
+        case "M":
+            document.write('Bom dia!');
+        break;
+        case "V":
+            document.write('Boa tarde!');
+            break;
+            case "N":
+                document.write('Boa noite!');
+                break
+            default:
+                document.write('Valor inválido!');
+
+
+
+    }
 
     
     //SAÍDA
