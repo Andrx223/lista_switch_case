@@ -10,11 +10,29 @@
     */
 
     // ENTRADA
+    let idade = Number(prompt('Qual a idade do seu cão?'));
+    const fator = prompt("Qual o tamanho do seu cachorro? (Use 'P' para pequeno, 'M' para médio e 'G' para grande)");
 
     
     // PROCESSAMENTO
+    let conta
+    switch(fator){
+        case 'P':
+            conta = 5
+        break;
+        case 'M':
+            conta = 6
+        break;
+        case 'G':
+            conta = 7
+        break;
+        default:
+                document.write(`Dado inválido`)
+    }
+    idade = idade * conta
 
     
     // SAÍDA
+    document.write(`Seu cão tem ${idade} anos humanos`)
 
 </script>

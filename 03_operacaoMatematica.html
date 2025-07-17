@@ -37,30 +37,30 @@
         default:
         document.write('Sinal inválido');
     }
-    switch(Number.isInteger(resultado)){
+    switch(Number.isInteger(resultado / 2)){
         case true:
-            mensagem = mensagem + 'é par,'
+            mensagem = mensagem + ' é par,'
             break;
         case false:
-            mensagem = mensagem + 'é ímpar'
+            mensagem = mensagem + ' é ímpar'
             break;
     }
     switch(Math.sign(resultado)){
         case 1:
-            mensagem = mensagem + 'é positivo e '
+            mensagem = mensagem + ' é positivo e '
             break;
         case -1:
-            mensagem = mensagem + 'é neagativo e'
+            mensagem = mensagem + ' é negativo e'
             break;
         default: 
-            mensagem = mensagem + 'é nulo e'
+            mensagem = mensagem + ' é nulo e'
     }
     switch(Number.isInteger(resultado / 1)){
         case true:
-            mensagem = mensagem + 'é inteiro'
+            mensagem = mensagem + ' é inteiro'
         break;
         case false:
-            mensagem = mensagem + 'é decimal'
+            mensagem = mensagem + ' é decimal'
     }
 
     
