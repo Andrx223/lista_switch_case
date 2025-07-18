@@ -12,9 +12,77 @@
     */
 
     //ENTRADA
+    const prologo = prompt('Serão feitas 5 perguntas, caso sua resposta seja sim, digite s, case seja um não, apenas clique enter. Pressione enter para continuar');
+    const telephone = prompt('Você telefonou para a vítima?');
+    const local = prompt('Você esteve no local do crime?');
+    const mora = prompt('Você mora perto da vítima?');
+    const caloteiro = prompt('Você devia para a vítima?');
+    const trabalho = prompt('Você trabalhou para a vítima?');
 
     
     //PROCESSAMENTO
+    let nivelDeCulpa = 0
+    switch(telephone){
+        case 's':
+            nivelDeCulpa = nivelDeCulpa + 1
+            break;
+        default:
+            nivelDeCulpa = nivelDeCulpa + 0
+        break;
+    }
+    switch(local){
+        case 's':
+            nivelDeCulpa = nivelDeCulpa + 1
+        break;
+        default:
+            nivelDeCulpa = nivelDeCulpa + 0
+        break;
+    }
+    switch(mora){
+        case 's':
+            nivelDeCulpa = nivelDeCulpa + 1
+        break;
+        default:
+            nivelDeCulpa = nivelDeCulpa + 0
+        break;
+    }
+    switch(caloteiro){
+        case 's':
+            nivelDeCulpa = nivelDeCulpa + 1
+        break;
+        default:
+            nivelDeCulpa = nivelDeCulpa + 0
+        break;
+    }
+    switch(trabalho){
+        case 's':
+            nivelDeCulpa = nivelDeCulpa + 1
+        break;
+        default:
+            nivelDeCulpa = nivelDeCulpa + 0
+        break;
+    }
+    switch(nivelDeCulpa){
+        case 0:
+            document.write('Você é inocente, ufa!')
+        break;
+        case 1:
+            document.write('Você é inocente, ufa!')
+        break;
+        case 2:
+            document.write('Você é suspeito, estamos de olho em você!')
+        break;
+        case 3:
+            document.write('Você é cúmplice!')
+        break;
+        case 4:
+            document.write('Você é cúmplice!')
+        break;
+        case 5:
+            document.write('Você é o assasino! Que escândulo!')
+        break;
+        
+    }
 
 
     //SAÍDA
